@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chromebookでのプログラミング開発環境のセットアップマニュアル</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Chromebookでのプログラミング開発環境のセットアップマニュアル</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>初期設定：ChromebookでLinux仮想環境をオンにする</h2>
+            <ol>
+                <li>
+                    <strong>ChromebookでLinux仮想環境をオンにする</strong>
+                    <p><strong>説明</strong>: Chromebookには、通常のChrome OSの機能に加えて、Linuxという別のオペレーティングシステムを仮想的に動かす機能があります。これにより、より多くの開発ツールやプログラムを利用できるようになります。</p>
+                    <p><strong>手順</strong>:</p>
+                    <ul>
+                        <li>「設定」アプリを開きます。</li>
+                        <li>左側メニューの「詳細設定」をクリックし、「デベロッパー」セクションを展開します。</li>
+                        <li>「Linux開発環境」をオンにするボタンをクリックし、表示される画面の指示に従ってセットアップを進めます。</li>
+                        <li>ユーザー名を入力し、「インストール」をクリックすると、Linux環境のダウンロードとインストールが開始されます。</li>
+                    </ul>
+                    <img src="https://example.com/image1.jpg" alt="Linuxセットアップの手順">
+                    <p><strong>補足情報</strong>:</p>
+                    <ul>
+                        <li><strong>Linuxとは？</strong>: Linuxは、オープンソースのオペレーティングシステムで、開発者やエンジニアに広く利用されています。Chrome OSと違い、Linuxはカスタマイズ可能で、強力なコマンドラインインターフェースを持っています。</li>
+                        <li><strong>エピソード</strong>: Linuxは1991年、当時大学生だったリーナス・トーバルズによって開発されました。彼がLinuxをオープンソースとして公開したことで、世界中の開発者が協力して改良を続け、現在では様々なデバイスやサーバーに使われています。</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>ターミナルの起動</h2>
+            <ol>
+                <li>
+                    <strong>ターミナルを起動する</strong>
+                    <p><strong>説明</strong>: ターミナルは、コマンドラインインターフェース（CLI）を通じてコンピュータに直接指示を出すためのツールです。プログラミングやシステム操作に欠かせない基本的なツールです。</p>
+                    <p><strong>手順</strong>:</p>
+                    <ul>
+                        <li>Linuxのインストールが完了すると、Chromebookのアプリ一覧に「Linuxアプリ」が表示されます。</li>
+                        <li>その中から「ターミナル」をクリックして起動します。</li>
+                    </ul>
+                    <img src="https://example.com/image2.jpg" alt="ターミナルの起動手順">
+                    <p><strong>補足情報</strong>:</p>
+                    <ul>
+                        <li><strong>ターミナルとは？</strong>: ターミナルは、ユーザーがコマンドを入力することで、OSやプログラムに指示を出すためのテキストベースのインターフェースです。GUI（グラフィカルユーザーインターフェース）よりも効率的な作業が可能で、特にプログラマーには重宝されています。</li>
+                        <li><strong>エピソード</strong>: 初期のコンピュータはすべてCLIで操作されていました。GUIが普及した現代でも、ターミナルはその効率性から多くのプロフェッショナルに愛用されています。</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>IDLEのインストール</h2>
+            <ol>
+                <li>
+                    <strong>システムを最新の状態にアップデート</strong>
+                    <p><strong>説明</strong>: システムを最新の状態に保つことは、セキュリティや機能の安定性を確保するために重要です。特にLinuxでは、コマンド一つで簡単にシステムの更新が可能です。</p>
+                    <pre><code>sudo apt update -y
+sudo apt upgrade -y</code></pre>
+                </li>
+                <li>
+                    <strong>Python3のIDLEをインストール</strong>
+                    <p><strong>説明</strong>: IDLEは、Pythonに付属している統合開発環境（IDE）で、簡単なコード編集や実行が可能です。Python初心者にとって使いやすいツールです。</p>
+                    <pre><code>sudo apt install idle3 -y</code></pre>
+                    <p><strong>補足情報</strong>:</p>
+                    <ul>
+                        <li><strong>IDLEとは？</strong>: IDLEはPythonの公式開発環境で、GUIベースの簡単なエディタとデバッガを備えています。初心者から経験者まで幅広いユーザーに使われています。</li>
+                        <li><strong>エピソード</strong>: Pythonの作者、グイド・ヴァンロッサムは、Pythonをより簡単に学べるようにするためにIDLEを開発しました。IDLEという名前は、著名なコメディアン、エリック・アイドル（Eric Idle）に由来しています。</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>IDLEの起動方法</h2>
+            <ul>
+                <li><strong>IDLEを起動する方法</strong></li>
+                <p><strong>説明</strong>: IDLEを起動することで、Pythonのコードを書いたり、実行したりすることができます。</p>
+                <p><strong>手順</strong>:</p>
+                <ul>
+                    <li><code>idle</code>：IDLEを単独で起動します。</li>
+                    <li><code>idle &lt;ファイル名.py&gt;</code>：指定したPythonファイルを開いて編集・実行します。</li>
+                    <li><code>idle &lt;ファイル名.py&gt; &amp;</code>：指定したファイルを開きつつ、ターミナルもそのまま使い続けることができます。</li>
+                </ul>
+                <p><strong>補足情報</strong>:</p>
+                <ul>
+                    <li><strong>IDLEの便利な使い方</strong>: IDLEには、コード補完機能やインデントの自動調整機能など、プログラム作成に便利な機能が備わっています。これらを活用することで、効率的にプログラミングが行えます。</li>
+                </ul>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Pythonファイルの実行方法</h2>
+            <ul>
+                <li><strong>Pythonスクリプトの実行</strong></li>
+                <p><strong>説明</strong>: Pythonスクリプトを実行することで、コードが意図したとおりに動作するか確認できます。スクリプトは、ターミナルから簡単に実行可能です。</p>
+                <pre><code>python3 &lt;ファイル名.py&gt;</code></pre>
+                <p><strong>補足情報</strong>:</p>
+                <ul>
+                    <li><strong>Pythonの魅力</strong>: Pythonはそのシンプルで読みやすい構文により、初心者からプロフェッショナルまで広く利用されているプログラミング言語です。Web開発、データ分析、人工知能など多岐にわたる分野で使用されています。</li>
+                </ul>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Linuxの基礎コマンド</h2>
+            <ul>
+                <li><strong>基本的なLinuxコマンド</strong></li>
+                <p><strong>説明</strong>: Linuxの操作には、いくつかの基本的なコマンドが役立ちます。これらを理解しておくことで、よりスムーズに作業を進めることができます。</p>
+                <p><strong>コマンド一覧</strong>:</p>
+                <ul>
+                    <li><code>ls</code>：ディレクトリ内のファイル一覧を表示</li>
+                    <li><code>cd</code>：ディレクトリを変更</li>
+                    <li><code>mkdir</code>：新しいディレクトリを作成</li>
+                    <li><code>rm</code>：ファイルを削除</li>
+                    <li><code>rmdir</code>：ディレクトリを削除</li>
+                    <li><code>touch</code>：新しい空のファイルを作成</li>
+                    <li><code>less</code>：ファイル内容をページ単位で表示</li>
+                    <li><code>cat</code>：ファイル内容を全て表示</li>
+                    <li><code>mv</code>：ファイルを移動、もしくは名前を変更</li>
+                </ul>
+                <p><strong>補足情報</strong>:</p>
+                <ul>
+                    <li><strong>コマンドの歴史</strong>: これらのコマンドは、Unix時代から続く伝統的なものです。LinuxはUnixに基づいており、そのシンプルで強力なコマンドが多くのユーザーに愛されています。</li>
+                </ul>
+            </ul>
+        </section>
+
+        <section>
+            <h2>発展：ライブラリのインストール</h2>
+            <ul>
+                <li><strong>pygameライブラリのインストール</strong></li>
+                <p><strong>説明</strong>: pygameは、ゲーム開発に特化したPythonライブラリで、2Dゲームの開発が手軽に行えるようになります。Pythonを使って、シンプルなゲームを作るための第一歩としてインストールしてみましょう。</p>
+                <pre><code>sudo apt install python3-pygame</code></pre>
+                <p><strong>補足情報</strong>:</p>
+                <ul>
+                    <li><strong>pygameの魅力</strong>: pygameを使えば、Pythonの知識だけでシンプルなゲームを作成することが可能です。初心者でも簡単に取り組めるため、プログラミングの学習に最適です。</li>
+                </ul>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
