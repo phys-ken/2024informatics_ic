@@ -23,6 +23,11 @@
         };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+    <!-- jsPDFとhtml2pdf.jsの読み込み -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- mammoth.jsの読み込み -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.14/mammoth.browser.min.js"></script>
     <!-- スタイルシートの読み込み -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -59,6 +64,37 @@
         <div id="editor-area">
             <textarea id="editor" placeholder="ここにMarkdownを入力してください..."></textarea>
             <div id="preview"></div>
+        </div>
+    </div>
+
+<!-- ダウンロード用のモーダルウィンドウ -->
+<div id="downloadModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>ダウンロードオプション</h2>
+        <label for="modal-filename">ファイル名:</label>
+        <input type="text" id="modal-filename">
+        <p>ダウンロード形式を選択してください:</p>
+        <label><input type="checkbox" id="format-md" checked> Markdown (.md)</label><br>
+        <label><input type="checkbox" id="format-html"> HTML (.html)</label><br>
+        <label><input type="checkbox" id="format-pdf"> PDF (.pdf) ※非推奨</label><br>
+        
+        <p class="pdf-recommendation">
+            ※PDFのダウンロードは、<strong>Chromeのプリント機能</strong>を使うことでより高品質に保存できます。
+        </p>
+        
+        <label><input type="checkbox" id="format-docx" disabled> Word (.docx) - 準備中</label><br>
+        <button id="startDownloadBtn">ダウンロード開始</button>
+    </div>
+</div>
+
+    <!-- プログレスバー -->
+    <div id="progressOverlay" class="overlay">
+        <div class="progress-container">
+            <p>ファイルを生成中...</p>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
         </div>
     </div>
 
