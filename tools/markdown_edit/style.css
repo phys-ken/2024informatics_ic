@@ -1,0 +1,154 @@
+/* 全体のスタイル */
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* ページ全体のスクロールを防止 */
+}
+
+/* チートシートのスタイル */
+#cheatsheet {
+    width: 200px;
+    background-color: #f7f7f7;
+    padding: 10px;
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
+}
+
+#cheatsheet h3 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+/* エディタコンテナのスタイル */
+#editor-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* ツールバーのスタイル */
+#editor-toolbar {
+    display: flex;
+    padding: 10px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #ddd;
+}
+
+#filename {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+#loadBtn, #downloadBtn {
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+/* エディタとプレビューエリア */
+#editor-area {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden; /* 全体のスクロールを防止 */
+}
+
+#editor, #preview {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* 個別にスクロール可能に */
+}
+
+#editor {
+    resize: none;
+    border: none;
+    border-right: 1px solid #ddd;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#preview {
+    background-color: #fff;
+}
+
+/* プレビュー内のテキストスタイル */
+#preview h1 {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#preview h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#preview h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#preview p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+#preview li {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 5px;
+}
+
+#preview blockquote {
+    border-left: 4px solid #ddd;
+    padding-left: 15px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+#preview pre {
+    background-color: #f5f5f5;
+    padding: 15px;
+    overflow-x: auto;
+    margin-bottom: 15px;
+    position: relative; /* コピーボタンの配置のため */
+}
+
+#preview code {
+    font-family: monospace;
+    background-color: #f5f5f5;
+    padding: 2px 4px;
+}
+
+#preview a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+#preview a:hover {
+    text-decoration: underline;
+}
+
+/* コピーボタンのスタイル */
+.copy-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #e0e0e0;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.copy-button:hover {
+    background-color: #d5d5d5;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シンプルなMarkdownエディタ</title>
+    <!-- 外部ライブラリの読み込み -->
+    <!-- marked.js のバージョンを 2.0.3 に変更 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.3/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <!-- スタイルシートの読み込み -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- チートシート -->
+    <div id="cheatsheet">
+        <h3>Markdown チートシート</h3>
+        <p># 見出し1</p>
+        <p>## 見出し2</p>
+        <p>### 見出し3</p>
+        <p>**太字**</p>
+        <p>*斜体*</p>
+        <p>- リスト項目</p>
+        <p>1. 番号付きリスト</p>
+        <p>[リンク](URL)</p>
+        <p>![画像](URL)</p>
+        <p>`コード`</p>
+        <p>```python</p>
+        <p>print("Hello World")</p>
+        <p>```</p>
+    </div>
+
+    <!-- エディタコンテナ -->
+    <div id="editor-container">
+        <!-- 上部の操作パネル -->
+        <div id="editor-toolbar">
+            <input type="text" id="filename" placeholder="ファイル名（拡張子不要）">
+            <button id="loadBtn">ファイルを開く</button>
+            <button id="downloadBtn">ダウンロード</button>
+        </div>
+        <!-- エディタとプレビューエリア -->
+        <div id="editor-area">
+            <textarea id="editor" placeholder="ここにMarkdownを入力してください..."></textarea>
+            <div id="preview"></div>
+        </div>
+    </div>
+
+    <!-- スクリプトの読み込み -->
+    <script src="script.js"></script>
+</body>
+</html>
