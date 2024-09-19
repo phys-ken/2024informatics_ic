@@ -53,6 +53,13 @@ function updatePreview() {
             }
         });
     });
+
+    // MathJaxで数式をレンダリング
+    if (window.MathJax && window.MathJax.typesetPromise) {
+        MathJax.typesetPromise([preview]).then(() => {
+            // 数式のレンダリングが完了した後の処理が必要ならここに記述
+        }).catch((err) => console.error('MathJaxレンダリングエラー:', err));
+    }
 }
 
 // エディタの入力イベント

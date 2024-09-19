@@ -3,19 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>シンプルなMarkdownエディタ</title>
+    <title>かんたんmdくん</title>
     <!-- 外部ライブラリの読み込み -->
-    <!-- marked.js のバージョンを 2.0.3 に変更 -->
+    <!-- marked.js のバージョンを 2.0.3 に設定 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.3/marked.min.js"></script>
+    <!-- highlight.js -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <!-- MathJaxの読み込み -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
     <!-- スタイルシートの読み込み -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- チートシート -->
     <div id="cheatsheet">
-        <h3>Markdown チートシート</h3>
+        <h3>かんたんmdくん</h3>
         <p># 見出し1</p>
         <p>## 見出し2</p>
         <p>### 見出し3</p>
@@ -26,9 +40,11 @@
         <p>[リンク](URL)</p>
         <p>![画像](URL)</p>
         <p>`コード`</p>
-        <p>```python</p>
-        <p>print("Hello World")</p>
-        <p>```</p>
+        <p>インライン数式: <code>$a = b$</code></p>
+        <p>ブロック数式:</p>
+        <p><code>$$</code></p>
+        <p><code>a = b</code></p>
+        <p><code>$$</code></p>
     </div>
 
     <!-- エディタコンテナ -->
