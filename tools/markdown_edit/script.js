@@ -180,6 +180,10 @@ function downloadAsHTML(fileName) {
 <title>${fileName}</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
 <style>
+/* Hide rect elements within MathJax equations */
+svg g[data-mml-node="mfrac"] rect {
+    display: none;
+}
 ${getPreviewStyles()}
 </style>
 </head>
