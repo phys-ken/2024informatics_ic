@@ -10,17 +10,66 @@ body {
 
 /* チートシートのスタイル */
 #cheatsheet {
-    width: 200px;
-    background-color: #f7f7f7;
-    padding: 10px;
+    width: 220px;
+    background-color: #333; /* 背景色を濃いグレーに設定 */
+    padding: 15px;
     overflow-y: auto;
     border-right: 1px solid #ddd;
+    color: white; /* 全体的なテキストカラーを白に */
+    font-family: 'Arial', sans-serif;
 }
 
+/* サービス名のスタイル */
 #cheatsheet h3 {
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #f7f7f7; /* サービス名の色を白に */
     margin-top: 0;
+    text-align: center;
 }
+
+/* セクションタイトルのスタイル */
+#cheatsheet .section-title {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #ddd; /* セクションタイトルを少し薄いグレーに */
+    border-bottom: 1px solid #555; /* 境界線も濃いグレー */
+    padding-bottom: 5px;
+}
+
+/* Markdown記法の要素は白で表示 */
+#cheatsheet p {
+    font-size: 14px;
+    margin: 8px 0;
+    color: white; /* Markdown記法要素は白 */
+}
+
+/* サンプル部分（コードや数式）のスタイル */
+#cheatsheet code, #cheatsheet .sample {
+    background-color: #444; /* サンプル部分の背景を暗めの灰色に */
+    padding: 2px 4px;
+    border-radius: 3px;
+    color: #ccc; /* サンプル部分のテキストを薄い灰色に */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* コードのスタイルを強調 */
+#cheatsheet p strong {
+    font-weight: bold;
+    color: white; /* 太字要素も白 */
+}
+
+#cheatsheet p em {
+    font-style: italic;
+    color: #ddd; /* 斜体部分を少し薄い色に */
+}
+
+/* 数式エリア */
+#cheatsheet .section-title + p code {
+    background-color: #444; /* 数式部分もサンプルエリアと同じスタイルに */
+    color: #ccc;
+}
+
 
 /* エディタコンテナのスタイル */
 #editor-container {
