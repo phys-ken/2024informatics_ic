@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>chromebookTutolial</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
+<style>
+/* Hide rect elements within MathJax equations */
+svg g[data-mml-node="mfrac"] rect {
+    display: none;
+}
+
+/* プレビュー内のテキストスタイル */
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    margin: 20px;
+    padding: 0;
+}
+#content h1 {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#content h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#content h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+#content li {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 5px;
+}
+#content blockquote {
+    border-left: 4px solid #ddd;
+    padding-left: 15px;
+    color: #555;
+    margin-bottom: 15px;
+}
+#content pre {
+    background-color: #f5f5f5;
+    padding: 15px;
+    overflow-x: auto;
+    margin-bottom: 15px;
+}
+#content code {
+    font-family: monospace;
+    background-color: #f5f5f5;
+    padding: 2px 4px;
+}
+#content a {
+    color: #3498db;
+    text-decoration: none;
+}
+#content a:hover {
+    text-decoration: underline;
+}
+
+</style>
+</head>
+<body>
+<div id="content">
+<h1 id="chromebookでのプログラミング開発環境のセットアップマニュアル">Chromebookでのプログラミング開発環境のセットアップマニュアル</h1>
+<h2 id="初期設定：chromebookでlinux仮想環境をオンにする">初期設定：ChromebookでLinux仮想環境をオンにする</h2>
+<ol>
+<li><p><strong>ChromebookでLinux仮想環境をオンにする</strong></p>
+<p><strong>説明</strong>: Chromebookには、通常のChrome OSの機能に加えて、Linuxという別のオペレーティングシステムを仮想的に動かす機能があります。これにより、より多くの開発ツールやプログラムを利用できるようになります。</p>
+<p><strong>手順</strong>:</p>
+<ul>
+<li>「設定」アプリを開きます。</li>
+<li>左側メニューの「詳細設定」をクリックし、「デベロッパー」セクションを展開します。</li>
+<li>「Linux開発環境」をオンにするボタンをクリックし、表示される画面の指示に従ってセットアップを進めます。</li>
+<li>ユーザー名を入力し、「インストール」をクリックすると、Linux環境のダウンロードとインストールが開始されます。</li>
+</ul>
+<p><img src="https://example.com/image1.jpg" alt="Linuxセットアップの手順"></p>
+<p><strong>補足情報</strong>:</p>
+<ul>
+<li><strong>Linuxとは？</strong>: Linuxは、オープンソースのオペレーティングシステムで、開発者やエンジニアに広く利用されています。Chrome OSと違い、Linuxはカスタマイズ可能で、強力なコマンドラインインターフェースを持っています。</li>
+<li><strong>エピソード</strong>: Linuxは1991年、当時大学生だったリーナス・トーバルズによって開発されました。彼がLinuxをオープンソースとして公開したことで、世界中の開発者が協力して改良を続け、現在では様々なデバイスやサーバーに使われています。</li>
+</ul>
+</li>
+</ol>
+<h2 id="ターミナルの起動">ターミナルの起動</h2>
+<ol>
+<li><p><strong>ターミナルを起動する</strong></p>
+<p><strong>説明</strong>: ターミナルは、コマンドラインインターフェース（CLI）を通じてコンピュータに直接指示を出すためのツールです。プログラミングやシステム操作に欠かせない基本的なツールです。</p>
+<p><strong>手順</strong>:</p>
+<ul>
+<li>Linuxのインストールが完了すると、Chromebookのアプリ一覧に「Linuxアプリ」が表示されます。</li>
+<li>その中から「ターミナル」をクリックして起動します。</li>
+</ul>
+<p><img src="https://example.com/image2.jpg" alt="ターミナルの起動手順"></p>
+<p><strong>補足情報</strong>:</p>
+<ul>
+<li><strong>ターミナルとは？</strong>: ターミナルは、ユーザーがコマンドを入力することで、OSやプログラムに指示を出すためのテキストベースのインターフェースです。GUI（グラフィカルユーザーインターフェース）よりも効率的な作業が可能で、特にプログラマーには重宝されています。</li>
+<li><strong>エピソード</strong>: 初期のコンピュータはすべてCLIで操作されていました。GUIが普及した現代でも、ターミナルはその効率性から多くのプロフェッショナルに愛用されています。</li>
+</ul>
+</li>
+<li><p><strong>システムを最新の状態にアップデート</strong></p>
+<p><strong>説明</strong>: システムを最新の状態に保つことは、セキュリティや機能の安定性を確保するために重要です。特にLinuxでは、コマンド一つで簡単にシステムの更新が可能です。</p>
+<p>コマンド:</p>
+<pre><code class="hljs plaintext">sudo apt update -y
+sudo apt upgrade -y</code></pre></li>
+</ol>
+<h2 id="microテキストエディタのインストール"><strong>microテキストエディタのインストール</strong></h2>
+<p>   <strong>説明</strong>: microは、使いやすく軽量なターミナルベースのテキストエディタで、初心者にも優れたユーザーエクスペリエンスを提供します。シンプルな操作で快適にコードを書くことができます。</p>
+<p>   <strong>手順</strong>:</p>
+<ul>
+<li>ターミナルを開き、以下のコマンドを実行してmicroをインストールします。<pre><code class="hljs plaintext">sudo apt install micro -y</code></pre></li>
+</ul>
+<p>   <strong>補足情報</strong>:</p>
+<ul>
+<li><strong>microとは？</strong>: microは、モダンなコマンドラインテキストエディタで、直感的な操作と高度な機能が備わっています。軽量でありながらも、カーソル操作や検索・置換機能、マウスサポートなど便利な機能が揃っています。</li>
+<li><strong>エピソード</strong>: microは、従来のエディタ（nanoやvim）に代わる使いやすいツールとして設計されました。特に初心者にとって学習のハードルが低いことから、多くのユーザーに支持されています。</li>
+</ul>
+<h2 id="microエディタの使い方">microエディタの使い方</h2>
+<ul>
+<li><p><strong>microの基本的な使い方</strong></p>
+<p><strong>説明</strong>: microは直感的なキーバインドを持つため、初心者でも簡単に操作できます。基本的なファイル編集や保存、終了は簡単に行うことができます。</p>
+<p><strong>手順</strong>:</p>
+<ul>
+<li><p>microを起動するには、ターミナルで以下のコマンドを使用します。</p>
+<pre><code class="hljs plaintext">micro &lt;ファイル名&gt;</code></pre><p>例: </p>
+<pre><code class="hljs plaintext">micro example.py</code></pre><p>これで<code>example.py</code>というファイルを編集できます（ファイルが存在しない場合は新規作成されます）。</p>
+</li>
+<li><p><strong>保存</strong>: ファイルを保存するには、<code>Ctrl + S</code>を押します。</p>
+</li>
+<li><p><strong>終了</strong>: microを終了するには、<code>Ctrl + Q</code>を押します。</p>
+</li>
+<li><p><strong>コピー&amp;ペースト</strong>: </p>
+<ul>
+<li>コピー: <code>Ctrl + Shift + C</code></li>
+<li>ペースト: <code>Ctrl + Shift + V</code></li>
+</ul>
+</li>
+<li><p><strong>検索</strong>: <code>Ctrl + F</code>でテキストを検索できます。</p>
+</li>
+<li><p><strong>置換</strong>: <code>Ctrl + E</code>を押してから<code>replace &lt;検索語&gt; &lt;置換語&gt;</code>を入力し、置換操作を行います。</p>
+</li>
+</ul>
+<p><strong>補足情報</strong>:</p>
+<ul>
+<li><strong>microの便利な使い方</strong>: microには自動インデント、シンタックスハイライト、複数のカーソル操作、プラグインなど、プログラミングに便利な機能が多数備わっています。特に、従来のvimやnanoよりも操作が直感的で、初めてのCLIエディタとして最適です。</li>
+</ul>
+</li>
+</ul>
+<h2 id="pythonファイルの実行方法">Pythonファイルの実行方法</h2>
+<ul>
+<li><p><strong>Pythonスクリプトの実行</strong></p>
+<p><strong>説明</strong>: Pythonスクリプトを実行することで、コードが意図したとおりに動作するか確認できます。スクリプトは、ターミナルから簡単に実行可能です。</p>
+<p>コマンド:</p>
+<pre><code class="hljs plaintext">python3 &lt;ファイル名.py&gt;</code></pre><p><strong>補足情報</strong>:</p>
+<ul>
+<li><strong>Pythonの魅力</strong>: Pythonはそのシンプルで読みやすい構文により、初心者からプロフェッショナルまで広く利用されているプログラミング言語です。Web開発、データ分析、人工知能など多岐にわたる分野で使用されています。</li>
+</ul>
+</li>
+</ul>
+<h2 id="linuxの基礎コマンド">Linuxの基礎コマンド</h2>
+<ul>
+<li><p><strong>基本的なLinuxコマンド</strong></p>
+<p><strong>説明</strong>: Linuxの操作には、いくつかの基本的なコマンドが役立ちます。これらを理解しておくことで、よりスムーズに作業を進めることができます。</p>
+<p><strong>コマンド一覧</strong>:</p>
+<ul>
+<li><code>ls</code>：ディレクトリ内のファイル一覧を表示</li>
+<li><code>cd</code>：ディレクトリを変更</li>
+<li><code>mkdir</code>：新しいディレクトリを作成</li>
+<li><code>rm</code>：ファイルを削除</li>
+<li><code>rmdir</code>：ディレクトリを削除</li>
+<li><code>touch</code>：新しい空のファイルを作成</li>
+<li><code>less</code>：ファイル内容をページ単位で表示</li>
+<li><code>cat</code>：ファイル内容を全て表示</li>
+<li><code>mv</code>：ファイルを移動、もしくは名前を変更</li>
+</ul>
+<p><strong>補足情報</strong>:</p>
+<ul>
+<li><strong>コマンドの歴史</strong>: これらのコマンドは、Unix時代から続く伝統的なものです。LinuxはUnixに基づいており、そのシンプルで強力なコマンドが多くのユーザーに愛されています。</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</body>
+</html>
